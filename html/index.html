@@ -15,11 +15,19 @@
   </head>
   <body>
     <article class="content">
-      <div class="p-3 bg-white" style="width: 280px">
+      <div class="p-3" style="width: 280px">
         <a
           target="_blank"
           href="/"
-          class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom"
+          class="
+            d-flex
+            align-items-center
+            pb-3
+            mb-3
+            link-dark
+            text-decoration-none
+            border-bottom
+          "
         >
           <img
             class="bi me-2"
@@ -35,12 +43,12 @@
             <button
               class="btn btn-toggle align-items-center rounded collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#home-collapse"
+              data-bs-target="#hass-collapse"
               aria-expanded="false"
             >
               Homeassistant
             </button>
-            <div class="collapse" id="home-collapse">
+            <div class="collapse" id="hass-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
                   <a
@@ -55,7 +63,7 @@
                     target="_blank"
                     href="http://nas:8123/lovelace-dashboard/lukas-home"
                     class="link-dark rounded"
-                    >Dashboard</a
+                    >Home</a
                   >
                 </li>
                 <li>
@@ -73,12 +81,12 @@
             <button
               class="btn btn-toggle align-items-center rounded collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#dashboard-collapse"
+              data-bs-target="#node-red-collapse"
               aria-expanded="false"
             >
               Node-Red
             </button>
-            <div class="collapse" id="dashboard-collapse">
+            <div class="collapse" id="node-red-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
                   <a
@@ -119,12 +127,12 @@
             <button
               class="btn btn-toggle align-items-center rounded collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#orders-collapse"
+              data-bs-target="#data-collapse"
               aria-expanded="false"
             >
               Datenverarbeitung
             </button>
-            <div class="collapse" id="orders-collapse">
+            <div class="collapse" id="data-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
                   <a
@@ -158,12 +166,12 @@
             <button
               class="btn btn-toggle align-items-center rounded collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#account-collapse"
+              data-bs-target="#system-collapse"
               aria-expanded="false"
             >
               System
             </button>
-            <div class="collapse" id="account-collapse">
+            <div class="collapse" id="system-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
                   <a
@@ -183,6 +191,44 @@
                 </li>
               </ul>
             </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#network-collapse"
+              aria-expanded="false"
+            >
+              Netzwerk
+            </button>
+            <div class="collapse" id="network-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    target="_blank"
+                    href="http://fritz.box"
+                    class="link-dark rounded"
+                    >Fritz!Box</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="http://nas:8123/lovelace-dashboard/netzwerk"
+                    class="link-dark rounded"
+                    >Dashboard</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <a
+              target="_blank"
+              href="https://lufixSch.github.io"
+              class="btn btn-toggle align-items-center rounded no-toggle"
+              >GitHub</a
+            >
           </li>
         </ul>
       </div>

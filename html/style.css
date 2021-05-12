@@ -1,3 +1,23 @@
+:root {
+  --background: #fff;
+  --text: hsl(210, 11%, 15%);
+  --text-shade: #1a1e21;
+  --text-tint: hsla(0, 0%, 0%, 0.65);
+  --text-tint-shade: rgba(0, 0, 0, 0.85);
+  --accent: hsl(162, 61%, 89%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(0, 0%, 10%);
+    --text: hsl(210, 11%, 85%);
+    --text-shade: hsl(206, 12%, 88%);
+    --text-tint: hsla(0, 0%, 100%, 0.651);
+    --text-tint-shade: hsla(0, 0%, 100%, 0.85);
+    --accent: hsl(162, 61%, 11%);
+  }
+}
+
 body {
   display: flex;
   flex-wrap: nowrap;
@@ -6,10 +26,21 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   justify-content: center;
+  background-color: var(--background);
+  color: var(--text);
 }
 body > * {
   flex-shrink: 0;
   min-height: -webkit-fill-available;
+}
+
+.link-dark {
+  color: var(--text);
+}
+
+.link-dark:focus,
+.link-dark:hover {
+  color: var(--text-shade);
 }
 
 .content {
@@ -28,14 +59,14 @@ body > * {
   align-items: center;
   padding: 0.25rem 0.5rem;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--text-tint);
   background-color: transparent;
   border: 0;
 }
 .btn-toggle:hover,
 .btn-toggle:focus {
-  color: rgba(0, 0, 0, 0.85);
-  background-color: #d2f4ea;
+  color: var(--text-tint-shade);
+  background-color: var(--accent);
 }
 
 .btn-toggle::before {
@@ -46,11 +77,18 @@ body > * {
   transform-origin: 0.5em 50%;
 }
 
+@media (prefers-color-scheme: dark) {
+  .btn-toggle::before {
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,0.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  }
+}
+
 .btn-toggle[aria-expanded='true'] {
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--text-tint-shade);
 }
 .btn-toggle[aria-expanded='true']::before {
   transform: rotate(90deg);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-toggle-nav a {
@@ -62,7 +100,12 @@ body > * {
 }
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
-  background-color: #d2f4ea;
+  background-color: var(--accent);
+}
+
+.no-toggle.btn-toggle::before {
+  content: '';
+  width: 0;
 }
 
 .fw-semibold {
